@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "Windows/mainwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -11,4 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_actionNew_Task_triggered()
+{
+
 }

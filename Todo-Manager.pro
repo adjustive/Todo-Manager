@@ -15,10 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     Classes/Task.cpp \
-    Classes/Category.cpp
+    Classes/Category.cpp \
+    Windows/edittask.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     Classes/Task.h \
-    Classes/Category.h
+    Classes/Category.h \
+    Windows/edittask.h \
+    Windows/mainwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += \
+    Windows/mainwindow.ui \
+    Windows/edittask.ui
