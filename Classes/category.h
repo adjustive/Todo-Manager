@@ -2,22 +2,23 @@
 #define CATEGORY_H
 
 #include <string>
+#include <QColor>
 
 using namespace std;
 
 class Category
 {
 public:
-    Category(string Name, int color);
+    Category(string Name, QColor color);
     ~Category();
 
-    void   SetColor(int color);
-    int    GetColor(void);
+    void   SetColor(QColor color);
+    QColor GetColor(void);
     void   SetName(string Name);
     string GetName(void);
 
 private:
-    int color; //evt. im html style implementieren?? 00FF00
+    QColor color; //evt. im html style implementieren?? 00FF00
     string Name;
 };
 

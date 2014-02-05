@@ -1,17 +1,17 @@
-#include "category.h"
+#include "Classes/Category.h"
 
-Category::Category(string Name, int color)
+Category::Category(string Name, QColor color)
 {
     this->Name = Name;
     this->color = color;
 }
 
-void Category::SetColor(int color)
+void Category::SetColor(QColor color)
 {
     this->color = color;
 }
 
-int Category::GetColor(void)
+QColor Category::GetColor(void)
 {
     return color;
 }
