@@ -21,7 +21,6 @@ EditTask::~EditTask()
 void EditTask::on_buttonBox_accepted()
 {
 #ifdef DEBUG_ON
-    qDebug() << "Create Task with Titel:" << ui->lineEdit->text() << endl;
+    qDebug() << "Create Task with Titel:" << endl;
 #endif
-
 }

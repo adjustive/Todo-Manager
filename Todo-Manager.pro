@@ -13,11 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     Classes/Task.cpp \
     Classes/Category.cpp \
     Windows/edittask.cpp \
-    Classes/taskconnector.cpp
+    Classes/taskconnector.cpp \
+    Windows/mainwindow.cpp
 
 HEADERS  += \
     Classes/Task.h \
