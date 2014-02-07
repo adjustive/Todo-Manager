@@ -4,14 +4,14 @@
 
 map <string, Task*> TaskConnector::Tasks;
 
-void TaskConnector::CreateTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, unsigned int Completion)
+void TaskConnector::CreateTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo)
 {
     Task *newTask = new Task(sTitel);
     newTask->SetDescription(sDescription);
     newTask->SetCategory(category);
     newTask->SetPriority(Priority);
     newTask->SetDueTo(DueTo);
-    newTask->SetCompletion(Completion);
+    newTask->SetCompletion(0);
 
     Tasks.insert(std::pair<string,Task*>(sTitel, newTask));//Neuen Task speichern
 }
