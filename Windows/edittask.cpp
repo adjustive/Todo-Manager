@@ -1,5 +1,10 @@
 #include "edittask.h"
 #include "ui_edittask.h"
+#include <QDebug>
+
+#ifndef DEBUG_ON
+  #define DEBUG_ON
+#endif
 
 EditTask::EditTask(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +16,12 @@ EditTask::EditTask(QWidget *parent) :
 EditTask::~EditTask()
 {
     delete ui;
+}
+
+void EditTask::on_buttonBox_accepted()
+{
+#ifdef DEBUG_ON
+    qDebug() << "Create Task with Titel:" << ui->lineEdit->text() << endl;
+#endif
+
 }

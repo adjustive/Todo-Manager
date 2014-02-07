@@ -16,13 +16,15 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     Classes/Task.cpp \
     Classes/Category.cpp \
-    Windows/edittask.cpp
+    Windows/edittask.cpp \
+    Classes/taskconnector.cpp
 
 HEADERS  += \
     Classes/Task.h \
     Classes/Category.h \
     Windows/edittask.h \
-    Windows/mainwindow.h
+    Windows/mainwindow.h \
+    Classes/taskconnector.h
 
 FORMS    += \
     Windows/mainwindow.ui \
