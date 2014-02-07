@@ -11,7 +11,7 @@ class TaskConnector
 {
 public:
     static void CreateTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo);
-    static void CreateSubTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, unsigned int Completion, Task* parentTask);
+    static void CreateSubTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, Task* parentTask);
 
 
 private:
