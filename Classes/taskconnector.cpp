@@ -18,8 +18,6 @@ void TaskConnector::CreateTask(string sTitel, string sDescription, Category* cat
 
 void TaskConnector::CreateSubTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, Task* parentTask)
 {
-
-
     //Parent Task suchen:
     map<string,Task*>::iterator it;
     it = Tasks.find(parentTask->GetTitle());
@@ -32,12 +30,7 @@ void TaskConnector::CreateSubTask(string sTitel, string sDescription, Category* 
         newTask->SetPriority(Priority);
         newTask->SetDueTo(DueTo);
         newTask->SetCompletion(0);
-       // (*it)->second->
-
-//        Tasks.insert(sTitel, newTask);//Neuen Task speichern
-         //it.//CreateSubTask(newTask);
-         //        Tasks.find(parentTask->GetTitle())->second
-
+        it->second->CreateSubTask(newTask);
     }
     else
         qDebug() << "Kein Parent Task gefunden";
