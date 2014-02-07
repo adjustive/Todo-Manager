@@ -16,7 +16,7 @@ void TaskConnector::CreateTask(string sTitel, string sDescription, Category* cat
     Tasks.insert(std::pair<string,Task*>(sTitel, newTask));//Neuen Task speichern
 }
 
-void TaskConnector::CreateSubTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, unsigned int Completion, Task* parentTask)
+void TaskConnector::CreateSubTask(string sTitel, string sDescription, Category* category, unsigned int Priority, tm DueTo, Task* parentTask)
 {
 
 
@@ -26,15 +26,17 @@ void TaskConnector::CreateSubTask(string sTitel, string sDescription, Category* 
 
     if(it != Tasks.end())
     {
-    //    Tasks.
-//        Task* newTask = new Task(sTitel);
-//        newTask->SetDescription(sDescription);
-//        newTask->SetCategory(category);
-//        newTask->SetPriority(Priority);
-//        newTask->SetDueTo(DueTo);
-//        newTask->SetCompletion(Completion);
+        Task* newTask = new Task(sTitel);
+        newTask->SetDescription(sDescription);
+        newTask->SetCategory(category);
+        newTask->SetPriority(Priority);
+        newTask->SetDueTo(DueTo);
+        newTask->SetCompletion(0);
+       // (*it)->second->
 
 //        Tasks.insert(sTitel, newTask);//Neuen Task speichern
+         //it.//CreateSubTask(newTask);
+         //        Tasks.find(parentTask->GetTitle())->second
 
     }
     else
