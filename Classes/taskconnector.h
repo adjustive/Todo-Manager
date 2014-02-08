@@ -5,6 +5,7 @@
 #include <map>
 #include <QString>
 #include <QDate>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -16,7 +17,8 @@ public:
     static int TaskExisting(QString Key);
 
 private:
-   static map <string, Task*> Tasks;
+   static map <QString, Task*> Tasks;
+   static QMessageBox errMessage;
 };
 
 #endif // TASKCONNECTOR_H
