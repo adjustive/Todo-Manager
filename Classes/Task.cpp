@@ -2,31 +2,32 @@
 #include <string>
 #include <list>
 #include <QDebug>
+#include <QString>
 #include <Classes/Task.h>
 
 using namespace std;
 
 //TODO: Hier weitermachen!!
-void Task::SetTitle(string Title)
+void Task::SetTitle(QString Title)
 {
     this->Title = Title;
 }
-Task::Task(string Titel)
+Task::Task(QString Titel)
 {
     this->Title = Titel; //unique identifier?
 }
 
-string Task::GetTitle(void)
+QString Task::GetTitle(void)
 {
     return Title;
 }
 
-void  Task::SetDescription(string Description)
+void  Task::SetDescription(QString Description)
 {
     this->Description = Description;
 }
 
-string Task::GetDescription(void)
+QString Task::GetDescription(void)
 {
     return Description;
 }
@@ -56,12 +57,12 @@ unsigned int   Task::GetPriority(void)
     return Priority;
 }
 
-void  Task::SetDueTo(tm DueTo)
+void  Task::SetDueTo(QDate DueTo)
 {
     this->DueTo = DueTo;
 }
 
-tm    Task::GetDueTo(void)
+QDate    Task::GetDueTo(void)
 {
     return DueTo;
 }

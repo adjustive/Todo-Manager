@@ -4,7 +4,8 @@
 #include <string>
 #include <list>
 #include <Classes/Category.h>
-
+#include <QString>
+#include <QDate>
 
 #define TITLE_LENGTH 30
 #define DESCRIPTION_LENGTH 200
@@ -14,29 +15,29 @@ using namespace std;
 class Task
 {
 public:
-    Task(string Titel);
+    Task(QString Titel);
     ~Task();
 
-    void   SetTitle(string Title);
-    string GetTitle(void);
-    void   SetDescription(string Title);
-    string GetDescription(void);
+    void   SetTitle(QString Title);
+    QString GetTitle(void);
+    void   SetDescription(QString Title);
+    QString GetDescription(void);
     void   SetCategory(Category* cat);
     int    GetCategory(void);
     void   SetPriority( unsigned int Priority);
     unsigned int GetPriority(void);
-    void   SetDueTo(tm DueTo);
-    tm     GetDueTo(void);
+    void   SetDueTo(QDate DueTo);
+    QDate     GetDueTo(void);
     void   SetCompletion(unsigned int Percent);
     unsigned int GetCompletion(void);
     void CreateSubTask(Task* subTask);
 
 private:
-    string Title;
-    string Description;
+    QString Title;
+    QString Description;
     Category *Cat;
     unsigned int Priority;
-    tm DueTo;
+    QDate DueTo;
     unsigned int Completion;
 
     list <Task*> Subtasks; //Liste mit Pointern zu Subtasks
