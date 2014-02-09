@@ -18,7 +18,7 @@ public:
 private slots:
     void on_buttonBox_accepted();
 
-    void on_tTitle_editingFinished();
+    void on_tTitle_textChanged(const QString &arg1);
 
 private:
     Ui::EditTask *ui;

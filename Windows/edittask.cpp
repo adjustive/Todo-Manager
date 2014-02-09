@@ -30,16 +30,16 @@ void EditTask::on_buttonBox_accepted()
 
 }
 
-void EditTask::on_tTitle_editingFinished()
+void EditTask::on_tTitle_textChanged(const QString &arg1)
 {
- if(TaskConnector::TaskExisting(ui->tTitle->text()) != 0)
- {
-     ui->lWarning->show();
-     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
- }
- else
- {
-     ui->lWarning->hide();
-     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
- }
+    if(TaskConnector::TaskExisting(arg1) != 0)
+    {
+        ui->lWarning->show();
+        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+    }
+    else
+    {
+        ui->lWarning->hide();
+        ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+    }
 }
